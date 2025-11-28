@@ -43,7 +43,6 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     rotateX: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
   },
 }
 
@@ -98,8 +97,8 @@ export function TestimonialsSection() {
             <motion.div
               key={index}
               variants={cardVariants}
+              transition={{ duration: 0.6 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 cursor-pointer relative overflow-hidden group"
             >
               <motion.div

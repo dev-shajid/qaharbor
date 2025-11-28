@@ -54,7 +54,6 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" },
   },
 }
 
@@ -99,12 +98,12 @@ export function WhyChooseSection() {
             <motion.div
               key={value.title}
               variants={cardVariants}
+              transition={{ duration: 0.5 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
               className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 cursor-pointer relative overflow-hidden"
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"
+                className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
