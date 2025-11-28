@@ -49,13 +49,12 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" },
   },
 }
 
 function ServiceCard({ service, index }: { service: (typeof services)[0]; index: number }) {
   return (
-    <motion.div variants={cardVariants}>
+    <motion.div variants={cardVariants} transition={{ duration: 0.5 }}>
       <motion.div
         whileHover={{ y: -8, scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
